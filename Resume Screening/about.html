@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>About Us | Resume Screening</title>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-search">
+                <p>Resume Screening</p>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html" class="link">Home</a></li>
+                    <li><a href="about.html" class="link active">About</a></li>
+                </ul>
+            </div>
+            <div class="nav-button">
+                <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+                <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+            </div>
+        </nav>
+
+        <div class="content">
+            <section class="about-us">
+                <header>
+                    <h1>About Us</h1>
+                </header>
+                <p>Welcome to Resume Screening, your trusted partner in resume screening. We are dedicated to helping job seekers present their best selves to potential employers by offering comprehensive resume screening services. Our goal is to ensure that your resume stands out and accurately reflects your skills, experiences, and career aspirations.</p>
+            </section>
+
+            <section class="our-mission">
+                <header>
+                    <h2>Our Mission</h2>
+                </header>
+                <p>At Resume Screening , our mission is to empower job seekers to achieve their career goals by providing top-notch resume screening services. We strive to enhance the recruitment process for employers by delivering well-screened, qualified candidates. Our team of experts works tirelessly to offer personalized feedback and support to ensure every resume we review meets the highest standards of quality and professionalism.</p>
+            </section>
+
+            <section class="our-team">
+                <header>
+                    <h2>Our Team</h2>
+                </header>
+                <p>Our team comprises experienced professionals with diverse backgrounds in human resources, recruitment, and career development. We are passionate about helping individuals succeed in their job search and committed to maintaining the integrity and confidentiality of our services. Meet some of our key team members below:</p>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        function myMenuFunction() {
+            var i = document.getElementById("navMenu");
+            if(i.className === "nav-menu") {
+                i.className += " responsive";
+            } else {
+                i.className = "nav-menu";
+            }
+        }
+
+        var a = document.getElementById("loginBtn");
+        var b = document.getElementById("registerBtn");
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+
+        function login() {
+            x.style.left = "4px";
+            y.style.right = "-520px";
+            a.className += " white-btn";
+            b.className = "btn";
+            x.style.opacity = 1;
+            y.style.opacity = 0;
+        }
+
+        function register() {
+            x.style.left = "-510px";
+            y.style.right = "5px";
+            a.className = "btn";
+            b.className += " white-btn";
+            x.style.opacity = 0;
+            y.style.opacity = 1;
+        }
+    </script>
+</body>
+</html>
